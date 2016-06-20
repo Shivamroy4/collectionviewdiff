@@ -27,7 +27,7 @@ class AppCategory: NSObject {
         let frozenapp = App()
         frozenapp.name = "Frozen"
         frozenapp.category = "Entertainment"
-        frozenapp.imagename = "frozen"
+        frozenapp.imagename = NSURL(string: "http://www.treathunger.com/rest_photos/70mm_int.jpg")
         frozenapp.price = NSNumber(float: 3.49)
         apps.append(frozenapp)
         
@@ -42,7 +42,7 @@ class AppCategory: NSObject {
         let telepaintApp = App()
         telepaintApp.name = "Telepaint"
         telepaintApp.category = "Games"
-        telepaintApp.imagename = "telepaint"
+        telepaintApp.imagename = NSURL(string: "http://www.treathunger.com/rest_photos/tyc_int.jpg")
         telepaintApp.price = NSNumber(float: 2.99)
         
         bestNewGamesApps.append(telepaintApp)
@@ -66,7 +66,7 @@ class App: NSObject
     var name: String?
     var id: NSNumber?
     var category: String?
-    var imagename: String?
+    var imagename: NSURL?
     var price: NSNumber?
 }
 

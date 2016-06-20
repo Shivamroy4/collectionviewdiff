@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AppCell: UICollectionViewCell {
     
@@ -25,8 +26,10 @@ class AppCell: UICollectionViewCell {
             }
             
             if let imagename = app?.imagename {
-                imageView.image = UIImage(named: imagename)
-            }
+                
+                if let url: NSURL? = imagename {
+                   imageView.setImageWithURL(url)
+                }            }
             
         }
     }
